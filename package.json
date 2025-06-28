@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SUKEsann2000/node_gemini/issues"
   },
-  "homepage": "https://github.com/SUKEsann2000/node_gemini#readme"
+  "homepage": "https://github.com/SUKEsann2000/node_gemini#readme",
+  "dependencies": {
+    "@google/gemini-cli": "^0.1.7"
+  }
 }
