@@ -1,0 +1,20 @@
+{
+  "name": "node_gemini",
+  "version": "1.0.0",
+  "description": "Gemini API for Node.js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SUKEsann2000/node_gemini.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SUKEsann2000/node_gemini/issues"
+  },
+  "homepage": "https://github.com/SUKEsann2000/node_gemini#readme"
+}
