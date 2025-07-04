@@ -13,13 +13,14 @@ const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 app.post("/generate", async (req, res) => {
   try {
     const { prompt } = req.body;
-    const fullPrompt = `${prompt}\nこれに関して答えて下さい。日本語で表示し、なるべくラフに表現してください。`;
 
     if (!prompt) {
       return res.status(400).send({ error: "Prompt is required" });
     }
 
-    const result = await model.generateContent(prompt);
+    const fullPrompt = `${prompt}\nこれに関して答えて下さい。日本語で表示し、なるべくラフに表現してください。`;
+
+    const result = await model.generateContent(fullPrompt);
     const response = await result.response;
     const text = response.text();
 
