@@ -8,7 +8,7 @@ const port = 11451;
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash" });
 
 app.post("/generate", async (req, res) => {
   try {
