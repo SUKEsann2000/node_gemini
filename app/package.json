@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/SUKEsann2000/node_gemini#readme",
   "dependencies": {
-    "@google/gemini-cli": "^0.1.7",
     "@google/generative-ai": "^0.24.1",
     "dotenv": "^17.0.0",
     "express": "^5.1.0"
