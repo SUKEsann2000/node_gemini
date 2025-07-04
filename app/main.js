@@ -12,7 +12,7 @@ const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
 app.post('/generate', async (req, res) => {
   try {
-    const { prompt } = req.body + 'を検索してください。その際、日本語で表示し、なるべくラフに表現してください。';
+    const { prompt } = req.body + '\nこれに関して答えて下さい。日本語で表示し、なるべくラフに表現してください。';
 
     if (!prompt) {
       return res.status(400).send({ error: 'Prompt is required' });
