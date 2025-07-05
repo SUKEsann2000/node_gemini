@@ -13,12 +13,13 @@ const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash" });
 app.post("/generate", async (req, res) => {
   try {
     const { prompt } = req.body;
+    const { memories } = req.body;
 
     if (!prompt) {
       return res.status(400).send({ error: "Prompt is required" });
     }
 
-    const fullPrompt = `${prompt}\nこれに関して答えて下さい。\nあなたはDiscord上からAPIを通して回答していることが前提です。日本語で表示し、なるべくラフに表現してください。なるべく簡潔に！`;
+    const fullPrompt = `${prompt}\nこれに関して答えて下さい。\n\n${memories ? `\n以下の情報を考慮してください:\n${memories}` : ""}`;
 
     const result = await model.generateContent(fullPrompt);
     const response = await result.response;
