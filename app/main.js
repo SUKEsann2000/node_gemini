@@ -18,7 +18,7 @@ app.post("/generate", async (req, res) => {
       return res.status(400).send({ error: "Prompt is required" });
     }
 
-    const fullPrompt = `${prompt}\nこれに関して答えて下さい。日本語で表示し、なるべくラフに表現してください。`;
+    const fullPrompt = `${prompt}\nこれに関して答えて下さい。\nあなたはDiscord上からAPIを通して回答していることが前提です。日本語で表示し、なるべくラフに表現してください。なるべく簡潔に！`;
 
     const result = await model.generateContent(fullPrompt);
     const response = await result.response;
